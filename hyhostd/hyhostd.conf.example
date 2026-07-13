@@ -1,0 +1,35 @@
+# hyhostd configuration (key = value). Override any key with --set k=v.
+# All capacities are in ZONES (1 zone = 1 dm-hyhost line = 1 GiB).
+
+# --- device / FS binding ---------------------------------------------------
+dm        = hyhost0            # dm-hyhost target name (dmsetup status source)
+backing   = /dev/nvme0n1       # backing NVMe ZNS namespace (report-zones source)
+fs        = f2fs               # f2fs | zenfs  (resize mechanism owner)
+mnt       = /mnt/hyhost        # F2FS mount point (resize ioctl fd source)
+aux       = /mnt/hyhost        # ZenFS aux dir (.hyzns_status / .hyzns_resize)
+f2fs_io   = f2fs_io            # patched f2fs_io binary (must have resize_cns)
+rz_source = report             # report | fs   (free-ZNS-zone reader; A/B knob)
+
+# --- loop ------------------------------------------------------------------
+poll_ms     = 500   # idle monitor period
+poll_min_ms = 100   # fast period when R_C is under pressure (<= grow_floor*2),
+                    # so a fast burst can't exhaust space within one idle poll
+
+# --- policy (paper §5.6.3) --------------------------------------------------
+grow_floor   = 2     # grow when free CNS zones R_C <= this (>0 = proactive)
+grow_guard   = 2     # ...and free ZNS zones R_Z >= this (never starve ZNS)
+shrink_hi    = 4     # shrink when R_C >= this
+shrink_guard = 1     # ...and R_Z <= this
+step         = 1     # base zones per resize
+step_max     = 8     # adaptive-step ceiling under burst
+r_min        = 4     # clamp: never shrink R below this
+r_max        = 64    # clamp: never grow R above this
+
+# --- safety timing -----------------------------------------------------------
+cooldown_ms    = 2000     # min gap between successful resizes (hysteresis)
+backoff_ms     = 1000     # initial backoff after a failed resize
+backoff_max_ms = 30000    # backoff ceiling
+ack_timeout_ms = 60000    # ZenFS .hyzns_resize.ack wait
+
+# --- logging ---------------------------------------------------------------
+# logfile =                # empty = stderr

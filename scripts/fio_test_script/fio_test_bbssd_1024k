@@ -1,0 +1,74 @@
+#!/bin/bash
+
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=1 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=1 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=1 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=1 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=1 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=2 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=2 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=2 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=2 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=2 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=4 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=4 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=4 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=4 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=4 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=8 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=8 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=8 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=8 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=8 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=16 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=16 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=16 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=16 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=16 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=32 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=32 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=32 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=32 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+taskset -c 0-31 fio --filename=/dev/nvme0n1 --name=fio_bb_test --direct=1 --rw=write --size=1M --offset=0 --bs=1M --numjobs=32 --group_reporting=1 --time_based=1 --runtime=300 --offset_increment=1M;
+echo 3 > /proc/sys/vm/drop_caches;
+
+
+
+
+
+
+

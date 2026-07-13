@@ -1,0 +1,5 @@
+#!/bin/bash
+
+umount -l /dev/nvme0n1
+umount -l /dev/nvme2n1
+echo "umount f2fs on nvme0n1 + nvme1n1 + nvme2n1"

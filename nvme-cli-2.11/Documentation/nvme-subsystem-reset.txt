@@ -1,0 +1,40 @@
+nvme-subsystem-reset(1)
+=======================
+
+NAME
+----
+nvme-subsystem-reset - Reset the nvme subsystem.
+
+SYNOPSIS
+--------
+[verse]
+'nvme subsystem-reset' <device>
+			[--output-format=<fmt> | -o <fmt>] [--verbose | -v]
+
+DESCRIPTION
+-----------
+Requests NVMe subsystem reset. The <device> param is mandatory and must
+be an NVMe character device (ex: /dev/nvme0).
+
+OPTIONS
+-------
+-o <fmt>::
+--output-format=<fmt>::
+	Set the reporting format to 'normal', 'json' or 'binary'. Only one
+	output format can be used at a time.
+
+-v::
+--verbose::
+	Increase the information detail in the output.
+
+EXAMPLES
+--------
+* Resets the subsystem.
++
+------------
+# nvme subsystem-reset /dev/nvme0
+------------
+
+NVME
+----
+Part of the nvme-user suite

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /mnt/f2fs/fxmark/bin/ #HY
+echo "cd /mnt/f2fs/fxmark/bin"
+echo "try ./run-fxmark2.py"
+./run-fxmark2.py
+

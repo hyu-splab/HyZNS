@@ -1,0 +1,44 @@
+nvme-flush(1)
+=============
+
+NAME
+----
+nvme-flush - Flush command.
+
+SYNOPSIS
+--------
+[verse]
+'nvme flush' <device> [--namespace-id=<nsid> | -n <nsid>]
+			[--output-format=<fmt> | -o <fmt>] [--verbose | -v]
+
+DESCRIPTION
+-----------
+The Flush command shall commit data and metadata associated with the
+specified namespace(s) to nonvolatile media. The flush applies to
+all commands completed prior to the submission of the Flush command.
+The controller may also flush additional data and/or metadata from
+any namespace.
+
+OPTIONS
+-------
+-n <nsid>::
+--namespace-id=<nsid>::
+	Specify the optional namespace id for this command. Defaults to
+	0xffffffff, indicating flush for all namespaces.
+
+-o <fmt>::
+--output-format=<fmt>::
+	Set the reporting format to 'normal', 'json' or 'binary'. Only one
+	output format can be used at a time.
+
+-v::
+--verbose::
+	Increase the information detail in the output.
+
+EXAMPLES
+--------
+No examples yet.
+
+NVME
+----
+Part of the nvme-user suite

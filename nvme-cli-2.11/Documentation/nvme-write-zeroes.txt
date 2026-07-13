@@ -1,0 +1,120 @@
+nvme-write-zeroes(1)
+====================
+
+NAME
+----
+nvme-write-zeroes - Send an NVMe write zeroes command, return results
+
+SYNOPSIS
+--------
+[verse]
+'nvme-write-zeroes' <device> [--start-block=<slba> | -s <slba>]
+			[--block-count=<nlb> | -c <nlb>]
+			[--ref-tag=<reftag> | -r <reftag>]
+			[--prinfo=<prinfo> | -p <prinfo>]
+			[--app-tag-mask=<appmask> | -m <appmask>]
+			[--app-tag=<apptag> | -a <apptag>] [--deac | -d]
+			[--limited-retry | -l] [--force-unit-access | -f]
+			[--namespace-id=<nsid> | -n <nsid>]
+			[--storage-tag<storage-tag> | -S <storage-tag>]
+			[--storage-tag-check<storage-tag-check> | -C <storage-tag-check>]
+			[--dir-type=<dtype> | -T <dtype>]
+			[--dir-spec=<dspec> | -D <dspec>]
+			[--output-format=<fmt> | -o <fmt>] [--verbose | -v]
+			[--timeout=<timeout> | -t <timeout>]
+
+DESCRIPTION
+-----------
+The Write Zeroes command is used to set a range of logical blocks to 0.
+
+OPTIONS
+-------
+-s <slba>::
+--start-block=<slba>::
+	Start block.
+
+-c <nlb>::
+--block-count=<nlb>::
+	Number of logical blocks to write zeroes.
+
+-p <prinfo>::
+--prinfo=<prinfo>::
+	Protection Information field definition.
++
+[]
+|=================
+|Bit|Description
+|3|PRACT: Protection Information Action. When set to 1, PI is stripped/inserted
+on read/write when the block format's metadata size is 8. When set to 0,
+metadata is passes.
+|2:0|PRCHK: Protection Information Check:
+|2|Set to 1 enables checking the guard tag
+|1|Set to 1 enables checking the application tag
+|0|Set to 1 enables checking the reference tag
+|=================
+
+-r <reftag>::
+--ref-tag=<reftag>::
+	Optional reftag when used with protection information.
+
+-m <appmask>::
+--app-tag-mask=<appmask>::
+	Optional application tag mask when used with protection information.
+
+-a <apptag>::
+--app-tag=<apptag>::
+	Optional application tag when used with protection information.
+
+-l::
+--limited-retry::
+	Sets the limited retry flag.
+
+-d::
+--deac::
+	Sets the DEAC bit, requesting controller deallocate the logical blocks.
+
+-f::
+--force-unit-access::
+	Set the force-unit access flag.
+
+-n <nsid>::
+--namespace-id=<nsid>::
+	Namespace ID use in the command.
+
+-S <storage-tag>::
+--storage-tag=<storage-tag>::
+	Variable Sized Logical Block Storage Tag(LBST).
+
+-C <storage-tag-check>::
+--storage-tag-check=<storage-tag-check>::
+	This bit specifies the Storage Tag field shall be checked as part of end-to-end
+	data protection processing.
+
+-T <dtype>::
+--dir-type=<dtype>::
+	Directive type
+
+-D <dspec>::
+--dir-spec=<dspec>::
+	Directive specific
+
+-o <fmt>::
+--output-format=<fmt>::
+	Set the reporting format to 'normal', 'json' or 'binary'. Only one
+	output format can be used at a time.
+
+-v::
+--verbose::
+	Increase the information detail in the output.
+
+-t <timeout>::
+--timeout=<timeout>::
+	Override default timeout value. In milliseconds.
+
+EXAMPLES
+--------
+No examples yet.
+
+NVME
+----
+Part of the nvme-user suite

@@ -1,0 +1,4 @@
+hyhostd
+*.o
+*.state
+daemon_*.log

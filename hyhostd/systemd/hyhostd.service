@@ -1,0 +1,35 @@
+# hyhostd - HyZNS CNS-area autoscaling daemon (paper §5.6.3)
+# Install: sudo make install  (copies binary -> /usr/local/sbin, this unit ->
+#          /etc/systemd/system, conf -> /etc/hyhostd.conf) ; then
+#          sudo systemctl daemon-reload && sudo systemctl enable --now hyhostd
+#
+# Type=simple: hyhostd runs in the foreground; systemd supervises it. With no
+# `logfile` set in the conf, hyhostd logs to stderr -> journald
+# (view: journalctl -u hyhostd -f). The daemon is restart-safe (re-reads live
+# R_C/R_Z on start), so Restart=on-failure is safe: a FEMU/device hiccup that
+# kills it is recovered automatically; it re-derives state from the device.
+
+[Unit]
+Description=HyZNS CNS-area autoscaling daemon (hyhostd)
+Documentation=file:/usr/local/share/hyhostd/README.md
+# The dm-hyhost target + the aux/ZenFS mount are set up out-of-band (load.sh /
+# setup.sh / mkfs+mount). Don't start until the device node exists; pair with the
+# real mount unit on a deployed system (RequiresMountsFor=/mnt/aux).
+After=local-fs.target
+ConditionPathExists=/dev/mapper/hyhost0
+# RequiresMountsFor=/mnt/aux        # uncomment + adjust on a deployed system
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/hyhostd -c /etc/hyhostd.conf
+# device down / mapper gone -> daemon pauses (doesn't spin); a crash -> restart.
+Restart=on-failure
+RestartSec=5
+# graceful: SIGTERM -> clean shutdown (one resize in flight is allowed to finish)
+KillSignal=SIGTERM
+TimeoutStopSec=70
+# needs root for dmsetup / f2fs_io / blkzone / nvme
+User=root
+
+[Install]
+WantedBy=multi-user.target

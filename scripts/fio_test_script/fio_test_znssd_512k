@@ -1,0 +1,43 @@
+#!/bin/bash
+
+for var in 1
+do
+    fio --filename=/dev/nvme1n1 --name=fio_zns_test --zonemode=zbd --zonesize=128M --direct=1 --rw=write --size=1z --offset=0 --bs=512K --numjobs=1 --group_reporting=1 --time_based=1 --runtime=180;
+    echo 3 > /proc/sys/vm/drop_caches;
+    sleep 3;
+done
+echo "aa"
+for var in 1
+do
+    taskset -c 0-1 fio --filename=/dev/nvme1n1 --name=fio_zns_test --zonemode=zbd --zonesize=128M --direct=1 --rw=write --size=1z --offset=0 --bs=512K --numjobs=2 --group_reporting=1 --time_based=1 --runtime=180;
+    echo 3 > /proc/sys/vm/drop_caches;
+    sleep 3;
+done
+echo "bb"
+for var in 1
+do
+    taskset -c 0-3 fio --filename=/dev/nvme1n1 --name=fio_zns_test --zonemode=zbd --zonesize=128M --direct=1 --rw=write --size=1z --offset=0 --bs=512K --numjobs=4 --group_reporting=1 --time_based=1 --runtime=180;
+    echo 3 > /proc/sys/vm/drop_caches;
+    sleep 3;
+done
+echo "cc"
+for var in 1
+do
+    taskset -c 0-7 fio --filename=/dev/nvme1n1 --name=fio_zns_test --zonemode=zbd --zonesize=128M --direct=1 --rw=write --size=1z --offset=0 --bs=512K --numjobs=8 --group_reporting=1 --time_based=1 --runtime=180;
+    echo 3 > /proc/sys/vm/drop_caches;
+    sleep 3;
+done
+echo "dd"
+for var in 1
+do
+    taskset -c 0-15 fio --filename=/dev/nvme1n1 --name=fio_zns_test --zonemode=zbd --zonesize=128M --direct=1 --rw=write --size=1z --offset=0 --bs=512K --numjobs=16 --group_reporting=1 --time_based=1 --runtime=180;
+    echo 3 > /proc/sys/vm/drop_caches;
+    sleep 3;
+done
+echo "ee"
+for var in 1
+do
+    taskset -c 0-31 fio --filename=/dev/nvme1n1 --name=fio_zns_test --zonemode=zbd --zonesize=128M --direct=1 --rw=write --size=1z --offset=0 --bs=512K --numjobs=32 --group_reporting=1 --time_based=1 --runtime=180;
+    echo 3 > /proc/sys/vm/drop_caches;
+    sleep 3;
+done
