@@ -145,6 +145,68 @@ static int act_zenfs(const hyd_cfg *cfg, uint32_t target, char *resmsg, size_t n
 	}
 }
 
+/* fs=f2fs + coord=ctree: 2-phase boundary handshake around the F2FS resize.
+ * ctree owns the ZNS S-zones and writes to them raw, so we must have ctree free
+ * the boundary zones BEFORE we move the ABA (f2fs_io), then confirm.  Control
+ * files under cfg->aux:
+ *   (1) publish .hyzns_prepare = target (atomic temp+rename)
+ *   (2) wait .hyzns_prepare.ack = "READY <K>" | "BUSY"
+ *   (3) on READY: run the F2FS resize ourselves (act_f2fs)
+ *   (4) write .hyzns_commit = "COMMIT" | "ABORT" so ctree finalizes/rolls back */
+static int act_f2fs_coord(const hyd_cfg *cfg, uint32_t target, char *resmsg, size_t n)
+{
+	char prep[512], ptmp[512], pack[512], commit[512], ctmp[512];
+	snprintf(prep,   sizeof prep,   "%s/.hyzns_prepare", cfg->aux);
+	snprintf(ptmp,   sizeof ptmp,   "%s/.hyzns_prepare.tmp", cfg->aux);
+	snprintf(pack,   sizeof pack,   "%s/.hyzns_prepare.ack", cfg->aux);
+	snprintf(commit, sizeof commit, "%s/.hyzns_commit", cfg->aux);
+	snprintf(ctmp,   sizeof ctmp,   "%s/.hyzns_commit.tmp", cfg->aux);
+
+	unlink(pack);                                    /* clear any stale ack */
+
+	/* (1) publish prepare */
+	FILE *f = fopen(ptmp, "w");
+	if (!f) { snprintf(resmsg, n, "ctree prepare open fail"); return -1; }
+	fprintf(f, "%u\n", target);
+	fflush(f); fclose(f);
+	if (rename(ptmp, prep) != 0) {
+		snprintf(resmsg, n, "ctree prepare rename fail"); return -1;
+	}
+
+	/* (2) wait READY | BUSY.  BUSY = ctree froze nothing → just back off. */
+	uint64_t deadline = hyd_now_ms() + cfg->ack_timeout_ms;
+	char verdict[16] = {0}; unsigned k_frozen = 0;
+	for (;;) {
+		FILE *af = fopen(pack, "r");
+		if (af) {
+			int k = fscanf(af, "%15s %u", verdict, &k_frozen);
+			fclose(af); unlink(pack);
+			if (k >= 1 && strncmp(verdict, "READY", 5) == 0) break;
+			snprintf(resmsg, n, "ctree prepare %s", k >= 1 ? verdict : "BADACK");
+			return -1;
+		}
+		if (hyd_now_ms() >= deadline) {
+			snprintf(resmsg, n, "ctree prepare ack timeout (%ums)", cfg->ack_timeout_ms);
+			return -1;
+		}
+		usleep(20 * 1000);
+	}
+
+	/* (3) WE move the ABA + grow F2FS. */
+	int grow_ok = (act_f2fs(cfg, target, resmsg, n) == 0);
+
+	/* (4) tell ctree COMMIT | ABORT (atomic temp+rename) */
+	FILE *cf = fopen(ctmp, "w");
+	if (cf) {
+		fprintf(cf, "%s\n", grow_ok ? "COMMIT" : "ABORT");
+		fflush(cf); fclose(cf);
+		rename(ctmp, commit);
+	}
+	if (grow_ok)
+		snprintf(resmsg, n, "ctree OK (R=%u, froze %u)", target, k_frozen);
+	return grow_ok ? 0 : -1;
+}
+
 int hyd_act(const hyd_cfg *cfg, const hyd_decision *d, char *resmsg, size_t n)
 {
 	if (d->action == ACT_NONE) {
@@ -153,5 +215,7 @@ int hyd_act(const hyd_cfg *cfg, const hyd_decision *d, char *resmsg, size_t n)
 	}
 	if (cfg->fs == FS_ZENFS)
 		return act_zenfs(cfg, d->target_r, resmsg, n);
+	if (cfg->coord_ctree)
+		return act_f2fs_coord(cfg, d->target_r, resmsg, n);
 	return act_f2fs(cfg, d->target_r, resmsg, n);
 }

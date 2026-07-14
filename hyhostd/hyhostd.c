@@ -122,6 +122,7 @@ static int cfg_set(hyd_cfg *c, const char *key, const char *val)
 	else if (!strcmp(key, "aux"))           snprintf(c->aux, sizeof c->aux, "%s", val);
 	else if (!strcmp(key, "f2fs_io"))       snprintf(c->f2fs_io, sizeof c->f2fs_io, "%s", val);
 	else if (!strcmp(key, "fs"))            c->fs = strcmp(val, "zenfs") ? FS_F2FS : FS_ZENFS;
+	else if (!strcmp(key, "coord"))         c->coord_ctree = !strcmp(val, "ctree");
 	else if (!strcmp(key, "rz_source"))     c->rz_source = strcmp(val, "fs") ? RZ_REPORT : RZ_FS;
 	else if (!strcmp(key, "poll_ms"))       c->poll_ms = atoi(val);
 	else if (!strcmp(key, "poll_min_ms"))   c->poll_min_ms = atoi(val);

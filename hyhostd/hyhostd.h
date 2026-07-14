@@ -55,6 +55,7 @@ typedef struct {
 	char        f2fs_io[256];    /* f2fs_io binary (patched w/ resize_cns)   */
 	fs_kind_t   fs;              /* f2fs | zenfs                             */
 	rz_source_t rz_source;       /* fs | report                             */
+	bool        coord_ctree;     /* fs=f2fs + ctree app: 2-phase boundary    */
 
 	uint32_t    poll_ms;         /* monitor period (idle)                   */
 	uint32_t    poll_min_ms;     /* monitor period under pressure (R_C low)  */
