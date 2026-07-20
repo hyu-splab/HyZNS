@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd HYSSD/f2fs-tools-1.16.0/mkfs/
+echo "cd HYSSD/f2fs-tools-1.15.0/mkfs"
+
+mkfs.f2fs -f -m -c /dev/nvme1n1 /dev/nvme0n1
+echo "format f2fs nvme1n1, nvme0n1"
+mkfs.f2fs -f -m -H -B 32 /dev/nvme2n1
+echo "format f2fs nvme2n1"
+
+mount -t f2fs /dev/nvme0n1 /mnt/mydrive/
+echo "mount f2fs on nvme0n1 + nvme1n1"
+mount -t f2fs /dev/nvme2n1 /mnt/f2fs/
+echo "mount f2fs on nvme2n1"
+

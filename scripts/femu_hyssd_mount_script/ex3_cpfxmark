@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cp -r HYSSD/fxmark/ /mnt/f2fs/ #HY
+cp -r HYSSD/fxmark/ /mnt/mydrive/ #MULTI
+echo "cp /fxmark /mnt/f2fs,mydrive"
+

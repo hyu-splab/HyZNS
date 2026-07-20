@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /mnt/mydrive/fxmark/bin/ #Multi
+echo "cd /mnt/mydrive/fxmark/bin"
+
+echo "try ./run-fxmark2.py"
+./run-fxmark2.py

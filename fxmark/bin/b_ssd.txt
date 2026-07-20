@@ -1,0 +1,483 @@
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWOL:1:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+1 29.999996 100968844.000000 3365628.582084
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWOL:2:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+2 29.992133 102310409.000000 3411241.564767
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWOL:4:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+4 29.988167 101621520.000000 3388720.652622
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWOL:8:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+8 29.987950 101728013.000000 3392296.353170
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWOL:16:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+16 29.995158 101421994.000000 3381278.815379
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWOL:32:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+32 30.047162 102078452.000000 3397274.342609
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWOL:64:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+64 30.035753 102055170.000000 3397789.571019
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWSL:1:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+1 30.000009 1731064.000000 57702.116023
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWSL:2:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+2 30.000034 2089746.000000 69658.122215
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWSL:4:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+4 30.000095 2087589.000000 69586.079064
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWSL:8:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+8 30.000347 2087283.000000 69575.295536
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWSL:16:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+16 30.001510 2086912.000000 69560.231990
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWSL:32:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+32 30.001362 2085037.000000 69498.079134
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DWSL:64:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+64 30.000859 4118206.000000 137269.602204
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DRBL:1:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+1 30.000004 126688965.000000 4222964.936938
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DRBL:2:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+2 30.012096 127239559.000000 4239609.293526
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DRBL:4:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+4 29.993027 126050188.000000 4202649.804258
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DRBL:8:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+8 29.979153 125568833.000000 4188538.399453
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DRBL:16:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+16 29.967184 126207423.000000 4211521.012644
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DRBL:32:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+32 30.031188 126375987.000000 4208158.068188
+
+### NUM_TEST_CONF  = 1
+### SYSTEM         = Linux 737e5bbd8655 5.15.6-cachedSeo #64 SMP Sat Jun 25 20:37:24 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+### DISK_SIZE      = 1G
+### DURATION       = 30s
+### DIRECTIO       = bufferedio,directio
+### MEDIA_TYPES    = nvme
+### FS_TYPES       = overlayfs
+### BENCH_TYPES    = DWOL,DWSL,DRBL
+### NCORES         = 1,2,4,8,16,24,32,40,48,56,64
+### CORE_SEQ       = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+
+
+### MODEL_NAME     = Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+### PHYSICAL_CHIPS = 2
+### CORE_PER_CHIP  = 32
+### SMT_LEVEL      = 1
+
+
+## nvme:overlayfs:DRBL:64:bufferedio
+# ncpu secs works works/sec real.sec user.sec nice.sec sys.sec idle.sec iowait.sec irq.sec softirq.sec steal.sec guest.sec user.util nice.util sys.util idle.util iowait.util irq.util softirq.util steal.util guest.util
+
+64 30.035656 126894714.000000 4224802.441864
+
+### NUM_TEST_CONF  = 1

@@ -1,0 +1,47 @@
+nvme-detach-ns(1)
+=================
+
+NAME
+----
+nvme-detach-ns - Send NVMe detach namespace, return result.
+
+SYNOPSIS
+--------
+[verse]
+'nvme detach-ns' <device> [--namespace-id=<nsid> | -n <nsid>]
+			[--controllers=<ctrl-list,> | -c <ctrl-list,>
+			[--output-format=<fmt> | -o <fmt>] [--verbose | -v]
+
+DESCRIPTION
+-----------
+For the NVMe device given, sends the nvme namespace detach command for
+the provided namespace identifier, attaching to the provided list of
+controller identifiers.
+
+OPTIONS
+-------
+-n <nsid>::
+--namespace-id=<nsid>::
+	The namespace identifier to detach.
+
+-c <ctrl-list,>::
+--controllers=<ctrl-list,>::
+	The comma separated list of controller identifiers to detach
+	the namespace from.
+
+-o <fmt>::
+--output-format=<fmt>::
+	Set the reporting format to 'normal', 'json' or 'binary'. Only one
+	output format can be used at a time.
+
+-v::
+--verbose::
+	Increase the information detail in the output.
+
+EXAMPLES
+--------
+No examples yet.
+
+NVME
+----
+Part of the nvme-user suite

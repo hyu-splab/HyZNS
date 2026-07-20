@@ -1,0 +1,6 @@
+# Editor / IDE
+.vscode/
+.idea/
+
+# Build/run junk
+__pycache__/

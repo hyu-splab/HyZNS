@@ -1,0 +1,36 @@
+nvme-gen-hostnqn(1)
+===================
+
+NAME
+----
+nvme-gen-hostnqn - Generate a host NVMe Qualified Name
+
+SYNOPSIS
+--------
+[verse]
+'nvme gen-hostnqn' [--output-format=<fmt> | -o <fmt>] [--verbose | -v]
+
+DESCRIPTION
+-----------
+Generate a random host NQN in the form:
+nqn.2014-08.org.nvmexpress:uuid:1b4e28ba-2fa1-11d2-883f-0016d3cca427
+and prints it to stdout.
+
+OPTIONS
+-------
+-o <fmt>::
+--output-format=<fmt>::
+	Set the reporting format to 'normal', 'json' or 'binary'. Only one
+	output format can be used at a time.
+
+-v::
+--verbose::
+	Increase the information detail in the output.
+
+EXAMPLES
+--------
+nvme gen-hostnqn
+
+NVME
+----
+Part of the nvme-user suite

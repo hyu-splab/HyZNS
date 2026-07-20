@@ -1,0 +1,3 @@
+*.o
+hyssd_monitor
+obj/

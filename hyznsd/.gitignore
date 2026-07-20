@@ -1,0 +1,4 @@
+hyznsd
+*.o
+*.state
+daemon_*.log
